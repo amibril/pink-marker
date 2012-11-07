@@ -1,0 +1,8 @@
+CREATE TABLE enlaces	 (
+	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	nombre VARCHAR(50),
+	direccion VARCHAR(255),
+	descripcion TEXT,
+	created DATETIME DEFAULT NULL,
+	modified DATETIME DEFAULT NULL
+);
