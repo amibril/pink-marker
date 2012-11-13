@@ -1,4 +1,4 @@
 pink-marker
 ===========
 
-Gestor de marcadores en linea
+Gestor de marcadores en linea (web)
