@@ -39,10 +39,11 @@ class BaseDatos
         $this->enlace->exec($sql);
     }
     
-	public function identificadorRegistro($tabla, $llave){
-		$sql="";
-		//$consulta = $this->consultaSimple($sql);
-		//return $consulta;
-		return 1;
-	}
+    public function identificadorRegistro($tabla, $columna){
+        $sql="select currval('{$tabla}_{$columna}_seq'::regclass) as identificador";
+        $consulta = $this->consultaSimple($sql);
+        
+        return $consulta;
+    }
+
 }
