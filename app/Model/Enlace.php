@@ -1,26 +1,18 @@
 <?php
-class Enlace extends AppModel {
+class Enlace extends AppModel{
 	public $validate = array(
-		'nombre' => array (
+		'nombre' => array(
 			'No vacio' => array(
 				'rule' => 'notEmpty',
-				'message' => 'Debe Ingresar un nombre.'	
+				'message' => 'Debe inbresar un nombre para el enlace.'
 			),
 			'Unico' => array(
 				'rule' => 'isUnique',
-				'message' => 'Ese nombre ya esta registrado.'	
+				'message' => 'Ese nombre de enlace ya esta registrado.'
 			)
-		),
-		'direccion' => array (
-			'Url calida' => array(
-				'rule' => 'url',
-				'message' => 'La direccion debe ser una URL valida.'
-			),
-			'Unico' => array(
-				'rule' => 'isUnique',
-				'message' => 'Esa direccion de enlace ya fue registrada.'	
-			)
-		));
+		)
+	);
 		
+	public $belongsTo = 'Directorio';
 }
 ?>
