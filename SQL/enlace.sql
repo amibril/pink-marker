@@ -8,8 +8,6 @@ CREATE TABLE enlace	 (
 );
 
 
-
-
 CREATE TABLE directorio	(
 	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	nombre VARCHAR(50),
