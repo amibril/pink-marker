@@ -1,8 +1,17 @@
-CREATE TABLE enlaces	 (
+CREATE TABLE enlace	 (
 	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	nombre VARCHAR(50),
 	direccion VARCHAR(255),
 	descripcion TEXT,
 	created DATETIME DEFAULT NULL,
 	modified DATETIME DEFAULT NULL
+);
+
+
+CREATE TABLE directorio	(
+	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	nombre VARCHAR(50),
+	created DATETIME DEFAULT NULL,
+	modified DATETIME DEFAULT NULLid INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	foreign key (id) references enlace
 );
